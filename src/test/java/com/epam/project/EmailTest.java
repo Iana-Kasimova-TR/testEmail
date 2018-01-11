@@ -1,5 +1,9 @@
 package com.epam.project;
 
+import com.epam.project.Pages.CreateEmailPage;
+import com.epam.project.Pages.DraftEmailPage;
+import com.epam.project.Pages.LoginPage;
+import com.epam.project.Pages.MainEmailPage;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 
 import org.openqa.selenium.By;
@@ -19,30 +23,13 @@ public class EmailTest {
 
     WebDriver driver;
     WebDriverWait wait;
-    private static final String USERNAME = "janekasimova";
-    private static final String PASSWORD = "Qwerty123456";
+
     private static final String STARTPAGE = "https://yandex.ru/";
-    private static final String FIELD_FOR_LOGIN = "//input[@placeholder='Логин']";
-    private static final String FIELD_FOR_PASSWORD = "//input[@placeholder='Пароль']";
-    private static final String BUTTON_LOGIN = "//span[text()='Войти']/..";
-    private static final String LOGO_YANDEX = "//a[@href='https://yandex.ru']";
-    private static final String LOGIN = String.format("//div[@title='%s']",USERNAME + "@yandex.ru");
+    private static final String LOGIN = "//div[@title='janekasimova@yandex.ru']";
     private static final String EXIT = "//a[text()='Выход']";
-    private static final String WRITE_EMAIL = "//span[text()='Написать']/..";
-    private static final String RECIPIENT = "//div[@class='mail-Compose-Field-Input']/div[@name='to']";
-    private static final String SUBJECT = "//div[@class='mail-Compose-Field-Input']/input[@name='subj']";
-    private static final String BODY = "//div[@role='textbox']/div";
-    private static final String REJECT = "//div[@title='Закрыть']";
-    private static final String DRAFT = "//span[text()='Черновики']";
     private static final String EMAIL = "mikkimous555@gmail.com";
     private static final String SUBJ = "hello";
     private static final String BODY_TEXT = "hello!";
-    private static final String RECIPIENT_OF_DRAFT = String.format("//span[@title='%s']", EMAIL);
-    private static final String SAVE_IN_DRAFT = "//span[text()='Сохранить и перейти']";
-    private static final String REMOVE = "//div[contains(@title, 'Удалить')]";
-    private static final String SENT_EMAIL = "//span[text()='Отправить']";
-    private static final String SENT_EMAILS = "//span[text()='Отправленные']";
-    private static final String LINK_ON_INBOX = "//a[contains(text(), 'Входящие')]";
 
     @BeforeClass
     public static void setupClass(){
@@ -70,29 +57,23 @@ public class EmailTest {
 
     @Test
     public void loginTest() throws Exception{
-       logIn(driver, wait);
-       Assert.assertTrue(driver.getCurrentUrl().contains("inbox"), "log in was succesfull");
+        LoginPage loginPage = new LoginPage(driver,wait);
+        MainEmailPage mainEmailPage = loginPage.logIn();
+        Assert.assertTrue(mainEmailPage.getUrlOfMainPage().contains("inbox"), "log in was succesfull");
     }
 
     @Test
     public void draftTest() throws Exception{
-        logIn(driver, wait);
-        writeEmail(driver, wait);
-        WebElement reject = getElement(driver, wait, REJECT);
-        reject.click();
-        WebElement save = getElement(driver, wait, SAVE_IN_DRAFT);
-        save.click();
-        WebElement drafts = getElement(driver, wait, DRAFT);
-        drafts.click();
-        WebElement recipientDraft = getElement(driver, wait, RECIPIENT_OF_DRAFT);
-        Assert.assertTrue(recipientDraft.getText().contains(EMAIL), "recipient of draft is correct");
-        recipientDraft.click();
-        WebElement subject = getElement(driver, wait, SUBJECT);
-        Assert.assertTrue(subject.getAttribute("value").contains(SUBJ),  "subject of draft is correct");
-        WebElement body = driver.findElement(By.xpath(BODY));
-        Assert.assertTrue(body.getText().contains(BODY_TEXT), "body of draft is correct");
-        delete(driver, wait);
-
+        LoginPage loginPage = new LoginPage(driver,wait);
+        MainEmailPage mainEmailPage = loginPage.logIn();
+        CreateEmailPage createEmailPage = mainEmailPage.write();
+        mainEmailPage =  createEmailPage.createDraft();
+        DraftEmailPage draftEmailPage = mainEmailPage.getDrafts();
+        Assert.assertTrue(draftEmailPage.recipient.get(0).getText().contains(EMAIL.substring(0, 11)), "recipient of draft is correct");
+        createEmailPage = draftEmailPage.getDraftBody();
+        Assert.assertTrue(createEmailPage.getValueOfSubject().contains(SUBJ),  "subject of draft is correct");
+        Assert.assertTrue(createEmailPage.getTextBody().contains(BODY_TEXT), "body of draft is correct");
+        createEmailPage.delete();
     }
 
 
@@ -153,7 +134,7 @@ public class EmailTest {
         WebElement remove = getElement(driver, wait, REMOVE);
         remove.click();
 
-    }
+    }*/
 
     public WebElement getElement(WebDriver driver, WebDriverWait wait, String xpath){
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
