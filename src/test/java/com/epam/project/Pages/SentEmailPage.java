@@ -14,7 +14,7 @@ import java.util.List;
 public class SentEmailPage extends Page {
 
     @FindAll({@FindBy(xpath = "//span[@title='mikkimous555@gmail.com']")})
-    List<WebElement> recipient;
+    public List<WebElement> recipient;
 
     @FindBy(xpath = "//div[contains(@title, 'Удалить')]")
     private WebElement remove;
@@ -23,8 +23,10 @@ public class SentEmailPage extends Page {
         super(driver,wait);
     }
 
-    public  void delete(){
-        remove.click();
+    public CreateEmailPage getEmail(){
+        recipient.get(0).click();
+        return new CreateEmailPage(driver,wait);
     }
+
 
 }

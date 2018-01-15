@@ -1,8 +1,10 @@
 package com.epam.project.Pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -32,9 +34,14 @@ public class LoginPage extends Page {
     }
 
     public MainEmailPage logIn(){
-        fieldForLogin.sendKeys(USERNAME);
+        Actions actions = new Actions(driver);
+        actions.moveToElement(fieldForLogin);
+        actions.click();
+        actions.sendKeys(USERNAME);
+        actions.build().perform();
         fieldForPassword.sendKeys(PASSWORD);
-        buttonLogin.click();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", buttonLogin);
         wait.until(ExpectedConditions.visibilityOf(logoYandex));
         return new MainEmailPage(driver, wait);
     }

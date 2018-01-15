@@ -33,6 +33,9 @@ public class DraftEmailPage extends Page {
     @FindBy(xpath = "//div[contains(@title, 'Удалить')]")
     private WebElement remove;
 
+    @FindBy(xpath = "//span[text()='Отправленные']")
+    private WebElement sent;
+
 
     public DraftEmailPage(WebDriver driver, WebDriverWait wait){
         super(driver, wait);
@@ -53,5 +56,11 @@ public class DraftEmailPage extends Page {
     public CreateEmailPage getDraftBody(){
         recipient.get(0).click();
         return new CreateEmailPage(driver, wait);
+    }
+
+    public SentEmailPage getSentEmails(){
+
+        sent.click();
+        return new SentEmailPage(driver, wait);
     }
 }

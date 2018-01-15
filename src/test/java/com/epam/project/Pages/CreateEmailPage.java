@@ -31,6 +31,9 @@ public class CreateEmailPage extends Page {
     @FindBy(xpath = "//div[contains(@title, 'Удалить')]")
     private WebElement remove;
 
+    @FindBy(xpath = "//span[text()='Отправить']")
+    private WebElement sent;
+
     private static final String EMAIL = "mikkimous555@gmail.com";
     private static final String SUBJ = "hello";
     private static final String BODY_TEXT = "hello!";
@@ -62,6 +65,12 @@ public class CreateEmailPage extends Page {
     public String getValueOfSubject(){
         wait.until(ExpectedConditions.visibilityOf(subject));
         return subject.getAttribute("value");
+    }
+
+    public MainEmailPage sentEmail(){
+        wait.until(ExpectedConditions.visibilityOf(sent));
+        sent.click();
+        return new MainEmailPage(driver, wait);
     }
 
     public String getTextBody(){

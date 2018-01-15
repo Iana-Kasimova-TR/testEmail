@@ -1,6 +1,7 @@
 package com.epam.project.Pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -34,7 +35,11 @@ public class MainEmailPage extends Page {
     public DraftEmailPage getDrafts(){
         wait.until(ExpectedConditions.visibilityOf(drafts));
         drafts.click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@title='mikkimous555@gmail.com']")));
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@title='mikkimous555@gmail.com']")));
+        }catch(Exception e){
+            logger.debug("there is no drafts");
+        }
         return new DraftEmailPage(driver, wait);
     }
 
@@ -45,6 +50,7 @@ public class MainEmailPage extends Page {
     }
 
     public String getUrlOfMainPage(){
-        return driver.getCurrentUrl();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        return js.executeScript("return document.URL;").toString();
     }
 }

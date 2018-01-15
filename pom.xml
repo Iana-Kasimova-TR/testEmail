@@ -11,6 +11,7 @@
     <webdrivermanager.version>2.0.1</webdrivermanager.version>
     <testng.version>6.13.1</testng.version>
     <selenium.version>3.8.1</selenium.version>
+    <log4j.version>1.2.17</log4j.version>
   </properties>
   <url>http://maven.apache.org</url>
   <dependencies>
@@ -32,5 +33,12 @@
       <artifactId>webdrivermanager</artifactId>
       <version>${webdrivermanager.version}</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/apache-log4j/log4j -->
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>${log4j.version}</version>
+    </dependency>
+
   </dependencies>
 </project>
