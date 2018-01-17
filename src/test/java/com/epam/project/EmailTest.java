@@ -4,14 +4,20 @@ import com.epam.project.Pages.*;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 
 /**
  * Unit test for simple App.
@@ -35,7 +41,45 @@ public class EmailTest {
 
     @BeforeMethod
     public void setupTest(){
-        driver = new ChromeDriver();
+        //driver = new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Iana_Kasimova\\Documents\\chromedriver.exe");
+        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+        capabilities.setPlatform(Platform.WINDOWS);
+        try {
+            String hubHost = "localhost";
+            driver = new RemoteWebDriver(new URL("http://" + hubHost + ":5555/wd/hub"), capabilities);
+        }catch (MalformedURLException e){
+            e.printStackTrace();
+        }
+
+        /**
+         * INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+         *
+         * Class to manage options specific to {@link ChromeDriver}.
+         *
+         * <p>Example usage:
+         * <pre><code>
+         * ChromeOptions options = new ChromeOptions()
+         * options.addExtensions(new File("/path/to/extension.crx"))
+         * options.setBinary(new File("/path/to/chrome"));
+         *
+         * // For use with ChromeDriver:
+         * ChromeDriver driver = new ChromeDriver(options);
+         *
+         * // For use with RemoteWebDriver:
+         * RemoteWebDriver driver = new RemoteWebDriver(
+         *     new URL("http://localhost:4444/wd/hub"),
+         *     new ChromeOptions());
+         * </code></pre>
+         *
+         * @since Since chromedriver v17.0.963.0
+         */
+
+       // String sessionId = ((RemoteWebDriver) webDriver).getSessionId().toString();
+       // String nodeHost = GridInfoExtracter.getHostNameAndPort(hubHost, 4444, sessionId)[0];
+        //System.out.println("Extracted hostname: " + nodeHost);
+
+
         driver.get(STARTPAGE);
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, 120);
