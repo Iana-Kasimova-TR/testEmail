@@ -80,41 +80,5 @@ public class MainEmailPage extends Page{
         sent.click();
     }
 
-  /*  @FindBy(xpath = "//span[text()='Черновики']/..")
-    private WebElement drafts;
 
-    @FindBy(xpath = "//span[text()='Отправленные']/..")
-    private WebElement sent;
-
-
-    public MainEmailPage(WebDriver driver, WebDriverWait wait){
-        super(driver, wait);
-    }
-
-    public CreateEmailPage write(){
-        write.click();
-        return new CreateEmailPage(driver, wait);
-    }
-
-    public DraftEmailPage getDrafts(){
-        wait.until(ExpectedConditions.visibilityOf(drafts));
-        drafts.click();
-        try {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@title='mikkimous555@gmail.com']")));
-        }catch(Exception e){
-            logger.debug("there is no drafts");
-        }
-        return new DraftEmailPage(driver, wait);
-    }
-
-    public SentEmailPage getSentEmail(){
-        wait.until(ExpectedConditions.visibilityOf(sent));
-        sent.click();
-        return new SentEmailPage(driver, wait);
-    }
-
-    public String getUrlOfMainPage(){
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        return js.executeScript("return document.URL;").toString();
-    }*/
 }
