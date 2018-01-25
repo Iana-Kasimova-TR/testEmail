@@ -1,5 +1,7 @@
 package com.epam.project.Pages;
 
+import com.epam.project.Elements.Button;
+import com.epam.project.Elements.Image;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,51 +18,10 @@ import java.util.List;
  */
 public class DraftEmailPage extends Page {
 
-    @FindBy(xpath = "//span[text()='Черновики']")
-    private WebElement drafts;
+    @FindBy(xpath = "//span[@title='mikkimous555@gmail.com']")
+    public Button recipient;
 
+    @FindBy(xpath = "//div[text()='В папке «Черновики» нет писем.']")
+    public Image emptyDraftFolder;
 
-    //TODO:Custom annotation with variable xpath
-    @FindAll({@FindBy(xpath = "//span[@title='mikkimous555@gmail.com']")})
-    public List<WebElement> recipient;
-
-    @FindBy(xpath = "//div[@class='mail-Compose-Field-Input']/input[@name='subj']")
-    private WebElement subject;
-
-    @FindBy(xpath = "//div[@role='textbox']/div")
-    private WebElement body;
-
-    @FindBy(xpath = "//div[contains(@title, 'Удалить')]")
-    private WebElement remove;
-
-    @FindBy(xpath = "//span[text()='Отправленные']")
-    private WebElement sent;
-
-
-    public DraftEmailPage(WebDriver driver, WebDriverWait wait){
-        super(driver, wait);
-    }
-
-    private static final String SAVE_IN_DRAFT = "//span[text()='Сохранить и перейти']";
-    private static final String REMOVE = "//div[contains(@title, 'Удалить')]";
-    private static final String SENT_EMAIL = "//span[text()='Отправить']";
-    private static final String SENT_EMAILS = "//span[text()='Отправленные']";
-    private static final String LINK_ON_INBOX = "//a[contains(text(), 'Входящие')]";
-
-
-    public String getRecipient(){
-        wait.until(ExpectedConditions.visibilityOf(recipient.get(0)));
-        return recipient.get(0).getText();
-    }
-
-    public CreateEmailPage getDraftBody(){
-        recipient.get(0).click();
-        return new CreateEmailPage(driver, wait);
-    }
-
-    public SentEmailPage getSentEmails(){
-
-        sent.click();
-        return new SentEmailPage(driver, wait);
-    }
 }

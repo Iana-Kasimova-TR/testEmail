@@ -1,5 +1,7 @@
 package com.epam.project.Pages;
 
+import com.epam.project.Elements.Button;
+import com.epam.project.Elements.CheckBox;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
@@ -13,20 +15,13 @@ import java.util.List;
  */
 public class SentEmailPage extends Page {
 
-    @FindAll({@FindBy(xpath = "//span[@title='mikkimous555@gmail.com']")})
-    public List<WebElement> recipient;
+   @FindBy(xpath = "//span[@title='mikkimous555@gmail.com']")
+    public Button recipient;
 
-    @FindBy(xpath = "//div[contains(@title, 'Удалить')]")
-    private WebElement remove;
+    @FindBy(xpath = "//div[contains(@title,'Удалить')]")
+    public Button remove;
 
-    public SentEmailPage(WebDriver driver, WebDriverWait wait){
-        super(driver,wait);
-    }
-
-    public CreateEmailPage getEmail(){
-        recipient.get(0).click();
-        return new CreateEmailPage(driver,wait);
-    }
-
+    @FindBy(xpath = "//span[contains(@class, 'checkbox')]")
+    public CheckBox box;
 
 }
