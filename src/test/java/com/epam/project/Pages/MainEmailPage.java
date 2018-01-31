@@ -4,6 +4,7 @@ import com.epam.project.Elements.Button;
 import com.epam.project.Elements.Image;
 import com.epam.project.Objects.Email;
 import com.sun.corba.se.spi.orbutil.fsm.Action;
+import lombok.Data;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -17,44 +18,51 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * Created by anakasimova on 10/01/2018.
  */
+@Data
 public class MainEmailPage extends Page{
 
     @FindBy(xpath = "//span[text()='Написать']/..")
-    public Button write;
+    private Button write;
 
     @FindBy(xpath = "//a[@href='https://yandex.ru']")
-    public Image logoYandex;
+    private Image logoYandex;
 
     @FindBy(xpath = "//div[@title='Закрыть']")
-    public Button reject;
+    private Button reject;
 
     @FindBy(xpath = "//span[text()='Сохранить и перейти']")
-    public Button saveInDraft;
+    private Button saveInDraft;
 
     @FindBy(xpath = "//div[contains(@title,'Удалить')]")
-    public Button remove;
+    private Button remove;
 
     @FindBy(xpath = "//span[text()='Отправить']")
-    public Button sent;
+    private Button sent;
 
     @FindBy(xpath = "//span[text()='Черновики']")
-    public Button drafts;
+    private Button drafts;
 
     @FindBy(xpath = "//span[text()='Отправленные']")
-    public Button sentEmails;
+    private Button sentEmails;
 
     @FindBy(xpath = "//div[text()='Письмо отправлено']")
-    public Image successfullMsg;
+    private Image successfullMsg;
+
+    @FindBy(xpath = "//div[@title='janekasimova@yandex.ru']")
+    private Button profile;
+
+    @FindBy(xpath = "//a[text()='Выход']")
+    private Button exit;
 
     public void writeEmail(Email email){
        write.click();
        CreateEmailForm form = new CreateEmailForm();
        form.init(email.driver);
-       email.wait.until(ExpectedConditions.visibilityOf(form.recepient.element));
+       email.wait.until(ExpectedConditions.visibilityOf(form.getRecepient().element));
        form.fillRecepient(email.recepient);
-       email.wait.until(ExpectedConditions.visibilityOf(form.subject.element));
+       email.wait.until(ExpectedConditions.visibilityOf(form.getSubject().element));
        form.fillSubject(email.subject);
-       email.wait.until(ExpectedConditions.visibilityOf(form.body.element));
+       email.wait.until(ExpectedConditions.visibilityOf(form.getBody().element));
        form.fillBody(new Actions(email.driver), email.bodyEmail);
     }
 
@@ -80,5 +88,10 @@ public class MainEmailPage extends Page{
         sent.click();
     }
 
-
+    public void logOut(WebDriverWait wait){
+        wait.until(ExpectedConditions.elementToBeClickable(profile.element));
+        profile.click();
+        wait.until(ExpectedConditions.visibilityOf(exit.element));
+        exit.click();
+    }
 }

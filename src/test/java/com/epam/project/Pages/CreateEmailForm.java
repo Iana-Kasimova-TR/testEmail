@@ -3,6 +3,7 @@ package com.epam.project.Pages;
 import com.epam.project.Elements.Button;
 import com.epam.project.Elements.TextBox;
 import com.sun.corba.se.spi.orbutil.fsm.Action;
+import lombok.Data;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,16 +15,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * Created by anakasimova on 10/01/2018.
  */
+@Data
 public class CreateEmailForm extends Page{
 
     @FindBy(xpath = "//div[@class='mail-Compose-Field-Input']/div[@name='to']")
-    public TextBox recepient;
+    private TextBox recepient;
 
     @FindBy(xpath = "//div[@class='mail-Compose-Field-Input']/input[@name='subj']")
-    public TextBox subject;
+    private TextBox subject;
 
     @FindBy(xpath = "//div[@role='textbox']/div")
-    public TextBox body;
+    private TextBox body;
 
 
     public void fillRecepient(String rec){

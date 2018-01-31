@@ -1,27 +1,15 @@
 package com.epam.project.Utils;
 
+import com.epam.project.Asserts.EmailAssert;
 import com.epam.project.Objects.Email;
 import com.epam.project.Objects.User;
-import com.epam.project.Pages.LoginPage;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.pagefactory.DefaultElementLocatorFactory;
-import org.openqa.selenium.support.pagefactory.ElementLocatorFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-
-import java.net.MalformedURLException;
-import java.net.URL;
 
 /**
  * Created by Iana_Kasimova on 1/23/2018.
@@ -31,6 +19,8 @@ public class BaseTest {
 
     public WebDriver driver;
     private WebDriverWait wait;
+    public UserFactory userFactory;
+    public String typeOfUser;
     public User user;
     public EmailAssert emailAssert;
     protected Email email;
@@ -38,21 +28,30 @@ public class BaseTest {
     @BeforeClass
     public void setupClass(){
         ChromeDriverManager.getInstance().setup();
-        user = new User( "janekasimova", "Qwerty123456");
+        userFactory = new UserFactory();
         emailAssert = new EmailAssert();
+        typeOfUser = "simple";
     }
 
     @BeforeMethod
     public void setupTest(){
-        driver = new ChromeDriver();
+        driver = DriverSingletone.getWebDriverInstance();
         driver.get(STARTPAGE);
         driver.manage().window().maximize();
+        user = userFactory.createUser(typeOfUser);
         email = new Email(user, "subject", "Hello!", "mikkimous555@gmail.com",driver);
         email.logInEmail();
     }
 
     @AfterMethod
     public void close(){
+        email.logOutFromemail();
+    }
+
+
+
+    @AfterClass
+    public void quit(){
         if(driver != null){
             driver.quit();
         }
@@ -71,5 +70,4 @@ public class BaseTest {
             e.printStackTrace();
         }
     }*/
-
 }
