@@ -14,45 +14,45 @@ import java.util.concurrent.TimeUnit;
  */
 public class EmailAssert {
 
-    public void checkSuccessfullLogIn(Email email){
+    public void checkSuccessfullLogIn(WebDriver driver, WebDriverWait wait){
         MainEmailPage mainEmailPage = new MainEmailPage();
-        mainEmailPage.init(email.driver);
-        email.wait.until(ExpectedConditions.visibilityOf(mainEmailPage.getLogoYandex().element));
+        mainEmailPage.init(driver);
+        wait.until(ExpectedConditions.visibilityOf(mainEmailPage.getLogoYandex().element));
         Assert.assertTrue(mainEmailPage.getWrite().isDisplayed(), "log in wasn't successfull");
     }
 
-    public void checkExistanceDraft(Email email) {
+    public void checkExistanceDraft(String recepient, String subject, String body, WebDriver driver, WebDriverWait wait) {
         DraftEmailPage draftPage = new DraftEmailPage();
-        draftPage.init(email.driver);
-        email.wait.until(ExpectedConditions.visibilityOf(draftPage.getRecipient().element));
-        Assert.assertTrue(draftPage.getRecipient().getText().contains(email.recepient.substring(0, 11)), "recipient of draft isn't correct");
+        draftPage.init(driver);
+        wait.until(ExpectedConditions.visibilityOf(draftPage.getRecipient().element));
+        Assert.assertTrue(draftPage.getRecipient().getText().contains(recepient.substring(0, 11)), "recipient of draft isn't correct");
         draftPage.getRecipient().click();
         CreateEmailForm createForm = new CreateEmailForm();
-        createForm.init(email.driver);
-        email.wait.until(ExpectedConditions.visibilityOf(createForm.getSubject().element));
-        Assert.assertTrue(createForm.getSubject().getValue().contains(email.subject), "subject of draft isn't  correct");
-        Assert.assertTrue(createForm.getBody().getText().contains(email.bodyEmail), "body of draft isn't correct");
+        createForm.init(driver);
+        wait.until(ExpectedConditions.visibilityOf(createForm.getSubject().element));
+        Assert.assertTrue(createForm.getSubject().getValue().contains(subject), "subject of draft isn't  correct");
+        Assert.assertTrue(createForm.getBody().getText().contains(body), "body of draft isn't correct");
     }
 
-    public void checkNonExistenceDraft(Email email){
+    public void checkNonExistenceDraft(WebDriver driver){
         MainEmailPage mainEmailPage = new MainEmailPage();
-        mainEmailPage.init(email.driver);
+        mainEmailPage.init(driver);
         mainEmailPage.getDrafts().click();
-        email.driver.navigate().refresh();
+        driver.navigate().refresh();
         DraftEmailPage draftPage = new DraftEmailPage();
-        draftPage.init(email.driver);
-        email.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        draftPage.init(driver);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         Assert.assertTrue(draftPage.getEmptyDraftFolder().getText().contains("В папке «Черновики» нет писем."), "email wasn't gone from drafts");
     }
 
-    public void checkExistenceSentEmail(Email email){
+    public void checkExistenceSentEmail(String recepient, WebDriver driver, WebDriverWait wait){
         MainEmailPage mainEmailPage = new MainEmailPage();
-        mainEmailPage.init(email.driver);
+        mainEmailPage.init(driver);
         mainEmailPage.getSentEmails().click();
         SentEmailPage sentPage = new SentEmailPage();
-        sentPage.init(email.driver);
-        email.wait.until(ExpectedConditions.visibilityOf(sentPage.getRecipient().element));
-        Assert.assertTrue(sentPage.getRecipient().getText().contains(email.recepient.substring(0, 11)), "email isn't in folder sent");
+        sentPage.init(driver);
+        wait.until(ExpectedConditions.visibilityOf(sentPage.getRecipient().element));
+        Assert.assertTrue(sentPage.getRecipient().getText().contains(recepient.substring(0, 11)), "email isn't in folder sent");
     }
 
 }

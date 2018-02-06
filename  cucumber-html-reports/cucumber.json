@@ -1,0 +1,334 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "user is logged in",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 12888229126,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigates to yandex login mail page",
+            "match": {
+              "location": "YandexMailSteps.navigateToLoginpage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5329845589,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "log in mail yandex",
+            "match": {
+              "location": "YandexMailSteps.logInEmail()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "line": 7,
+        "name": "log in email",
+        "description": "",
+        "id": "yandex-mail;log-in-email",
+        "after": [
+          {
+            "result": {
+              "duration": 3736816471,
+              "status": "passed"
+            },
+            "match": {
+              "location": "YandexMailSteps.close()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3329203787,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user should be on the page of his email",
+            "match": {
+              "location": "YandexMailSteps.checkLogin()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "user is logged in",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1589888316,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigates to yandex login mail page",
+            "match": {
+              "location": "YandexMailSteps.navigateToLoginpage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3779467449,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "log in mail yandex",
+            "match": {
+              "location": "YandexMailSteps.logInEmail()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "line": 17,
+        "name": "user save a letter as draft",
+        "description": "",
+        "id": "yandex-mail;user-save-a-letter-as-draft;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 2755556124,
+              "status": "passed"
+            },
+            "match": {
+              "location": "YandexMailSteps.close()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3883135876,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "write \"Hello\" to \"mikkimous555@gmail.com\" with subject \"Hi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Hello",
+                  "offset": 7
+                },
+                {
+                  "val": "mikkimous555@gmail.com",
+                  "offset": 18
+                },
+                {
+                  "val": "Hi",
+                  "offset": 56
+                }
+              ],
+              "location": "YandexMailSteps.createEmail(String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 53369770111,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "send email in draft folder",
+            "match": {
+              "location": "YandexMailSteps.createDraft()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 857438261,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "there must be a letter \"Hello\" to \"mikkimous555@gmail.com\" with subject \"Hi\" in draft folder",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Hello",
+                  "offset": 24
+                },
+                {
+                  "val": "mikkimous555@gmail.com",
+                  "offset": 35
+                },
+                {
+                  "val": "Hi",
+                  "offset": 73
+                }
+              ],
+              "location": "YandexMailSteps.checkDraftFolder(String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "user is logged in",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 3784097376,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigates to yandex login mail page",
+            "match": {
+              "location": "YandexMailSteps.navigateToLoginpage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3798851006,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "log in mail yandex",
+            "match": {
+              "location": "YandexMailSteps.logInEmail()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "line": 18,
+        "name": "user save a letter as draft",
+        "description": "",
+        "id": "yandex-mail;user-save-a-letter-as-draft;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 3342158810,
+              "status": "passed"
+            },
+            "match": {
+              "location": "YandexMailSteps.close()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2378091901,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "write \"Hi\" to \"mikkimous555@gmail.com\" with subject \"Hello\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Hi",
+                  "offset": 7
+                },
+                {
+                  "val": "mikkimous555@gmail.com",
+                  "offset": 15
+                },
+                {
+                  "val": "Hello",
+                  "offset": 53
+                }
+              ],
+              "location": "YandexMailSteps.createEmail(String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 40021400305,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "send email in draft folder",
+            "match": {
+              "location": "YandexMailSteps.createDraft()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 863959641,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "there must be a letter \"Hi\" to \"mikkimous555@gmail.com\" with subject \"Hello\" in draft folder",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Hi",
+                  "offset": 24
+                },
+                {
+                  "val": "mikkimous555@gmail.com",
+                  "offset": 32
+                },
+                {
+                  "val": "Hello",
+                  "offset": 70
+                }
+              ],
+              "location": "YandexMailSteps.checkDraftFolder(String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Yandex mail",
+    "description": "",
+    "id": "yandex-mail",
+    "keyword": "Feature",
+    "uri": "yandexMail.feature"
+  }
+]

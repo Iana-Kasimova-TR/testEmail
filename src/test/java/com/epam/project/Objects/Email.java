@@ -30,56 +30,6 @@ public class Email {
       this.wait = new WebDriverWait(driver, 120);
     }
 
-    public void logInEmail(){
-        LoginPage loginPage = new LoginPage();
-        loginPage.init(driver);
-        loginPage.logIn(this.user);
-    }
 
-    public void createDraft() {
-        MainEmailPage mainEmailPage = new MainEmailPage();
-        mainEmailPage.init(driver);
-        wait.until(ExpectedConditions.visibilityOf(mainEmailPage.getLogoYandex().element));
-        mainEmailPage.writeEmail(this);
-        mainEmailPage.sendToDraft(this);
-    }
-
-
-    public void deleteEmail() {
-        MainEmailPage mainEmailPage = new MainEmailPage();
-        mainEmailPage.init(driver);
-        wait.until(ExpectedConditions.visibilityOf(mainEmailPage.getRemove().element));
-        mainEmailPage.deleteEmail();
-    }
-
-    public void deleteSentEmail(){
-        SentEmailPage sentPage = new SentEmailPage();
-        sentPage.init(driver);
-        sentPage.getBox().check();
-        sentPage.getRemove().click();
-    }
-
-    public void sentDraft(){
-        DraftEmailPage draftPage = new DraftEmailPage();
-        draftPage.init(this.driver);
-        wait.until(ExpectedConditions.visibilityOf(draftPage.getRecipient().element));
-        draftPage.getRecipient().click();
-        sentEmail();
-    }
-
-    public void sentEmail(){
-        MainEmailPage mainPage = new MainEmailPage();
-        mainPage.init(driver);
-        wait.until(ExpectedConditions.visibilityOf(mainPage.getSent().element));
-        mainPage.sent();
-        wait.until(ExpectedConditions.visibilityOf(mainPage.getSuccessfullMsg().element));
-    }
-
-    public void logOutFromemail(){
-        MainEmailPage mainPage = new MainEmailPage();
-        mainPage.init(driver);
-        mainPage.logOut(wait);
-        wait.until(webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
-    }
     }
 

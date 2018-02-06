@@ -66,15 +66,15 @@ public class MainEmailPage extends Page{
        form.fillBody(new Actions(email.driver), email.bodyEmail);
     }
 
-    public void sendToDraft(Email email){
-        email.wait.until(ExpectedConditions.visibilityOf(reject.element));
+    public void sendToDraft(WebDriverWait wait){
+        wait.until(ExpectedConditions.visibilityOf(reject.element));
         reject.click();
-        email.wait.until(ExpectedConditions.visibilityOf(saveInDraft.element));
+        wait.until(ExpectedConditions.visibilityOf(saveInDraft.element));
         saveInDraft.click();
-        email.wait.until(ExpectedConditions.visibilityOf(drafts.element));
+        wait.until(ExpectedConditions.visibilityOf(drafts.element));
         drafts.click();
         try {
-            email.wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@title='" + email.recepient + "']")));
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(@class, 'mail-MessageSnippet')]")));
         }catch(Exception e){
             drafts.logger.error("there is no drafts");
         }

@@ -3,7 +3,11 @@ package com.epam.project.Utils;
 import com.epam.project.Asserts.EmailAssert;
 import com.epam.project.Objects.Email;
 import com.epam.project.Objects.User;
+import com.epam.project.Pages.MainEmailPage;
+import cucumber.api.CucumberOptions;
+import cucumber.api.testng.AbstractTestNGCucumberTests;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
@@ -14,15 +18,14 @@ import org.testng.annotations.BeforeMethod;
 /**
  * Created by Iana_Kasimova on 1/23/2018.
  */
-public class BaseTest {
-    private static final String STARTPAGE = "https://yandex.ru/";
+@CucumberOptions(strict = true, plugin = { "pretty","html: cucumber-html-reports", "json: cucumber-html-reports/cucumber.json" }, features = "src/test/resources/features/", glue = {"com.epam.project"})
+public class BaseTest extends AbstractTestNGCucumberTests {
 
-    public WebDriver driver;
-    private WebDriverWait wait;
-    public UserFactory userFactory;
-    public String typeOfUser;
-    public User user;
-    public EmailAssert emailAssert;
+    public static WebDriver driver;
+    public static UserFactory userFactory;
+    public static WebDriverWait wait;;
+    public static User user;
+    public static EmailAssert emailAssert;
     protected Email email;
 
     @BeforeClass
@@ -30,25 +33,11 @@ public class BaseTest {
         ChromeDriverManager.getInstance().setup();
         userFactory = new UserFactory();
         emailAssert = new EmailAssert();
-        typeOfUser = "simple";
-    }
-
-    @BeforeMethod
-    public void setupTest(){
         driver = DriverSingletone.getWebDriverInstance();
-        driver.get(STARTPAGE);
         driver.manage().window().maximize();
-        user = userFactory.createUser(typeOfUser);
-        email = new Email(user, "subject", "Hello!", "mikkimous555@gmail.com",driver);
-        email.logInEmail();
+        wait = new WebDriverWait(driver, 120);
+        user = BaseTest.userFactory.createUser("simple");
     }
-
-    @AfterMethod
-    public void close(){
-        email.logOutFromemail();
-    }
-
-
 
     @AfterClass
     public void quit(){
@@ -57,17 +46,4 @@ public class BaseTest {
         }
     }
 
-    //Here run tests by RemoteWebDriver
-    /*@BeforeMethod
-    public void setupRemotetest(){
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Iana_Kasimova\\Documents\\chromedriver.exe");
-        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-        capabilities.setPlatform(Platform.WINDOWS);
-        try {
-            String hubHost = "localhost";
-            driver = new RemoteWebDriver(new URL("http://" + hubHost + ":5555/wd/hub"), capabilities);
-        }catch (MalformedURLException e){
-            e.printStackTrace();
-        }
-    }*/
 }
