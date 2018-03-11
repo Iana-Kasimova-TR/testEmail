@@ -1,0 +1,266 @@
+2018-03-11 21:03:13 INFO  Page:20 - input janekasimova
+2018-03-11 21:03:13 INFO  Page:20 - input Qwerty123456
+2018-03-11 21:03:13 INFO  Page:16 - click on Войти
+2018-03-11 21:03:14 WARN  Page:41 - cannot unhighlight element
+2018-03-11 21:03:16 INFO  Page:23 - Написать is displayed true
+2018-03-11 21:03:17 INFO  Page:16 - click on janekasimova
+2018-03-11 21:03:17 INFO  Page:16 - click on Выход
+2018-03-11 21:03:19 WARN  Page:41 - cannot unhighlight element
+2018-03-11 22:03:09 INFO  Page:20 - input janekasimova
+2018-03-11 22:03:09 INFO  Page:20 - input Qwerty123456
+2018-03-11 22:03:09 INFO  Page:16 - click on Войти
+2018-03-11 22:03:10 WARN  Page:41 - cannot unhighlight element
+2018-03-11 22:03:12 INFO  Page:16 - click on Написать
+2018-03-11 22:03:14 INFO  Page:20 - input mikkimous555@gmail.com
+2018-03-11 22:03:14 INFO  Page:20 - input subject
+2018-03-11 22:03:14 INFO  Page:28 - input Hello!
+2018-03-11 22:03:15 INFO  Page:16 - click on 
+2018-03-11 22:03:15 INFO  Page:16 - click on Сохранить и перейти
+2018-03-11 22:03:15 WARN  Page:41 - cannot unhighlight element
+2018-03-11 22:03:15 INFO  Page:16 - click on Черновики
+2018-03-11 22:03:16 INFO  Page:28 - Reading text mikkimous555
+2018-03-11 22:03:16 INFO  Page:16 - click on mikkimous555
+2018-03-11 22:03:17 INFO  Page:32 - read from this elementProxy element for: DefaultElementLocator 'By.xpath: //div[@class='mail-Compose-Field-Input']/input[@name='subj']'
+2018-03-11 22:03:17 INFO  Page:16 - click on janekasimova
+2018-03-11 22:03:17 INFO  Page:16 - click on Выход
+2018-03-11 22:03:19 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:19:06 INFO  Page:20 - input janekasimova
+2018-03-11 23:19:06 INFO  Page:20 - input Qwerty123456
+2018-03-11 23:19:06 INFO  Page:16 - click on Войти
+2018-03-11 23:19:07 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:19:09 INFO  Page:16 - click on Написать
+2018-03-11 23:19:11 INFO  Page:20 - input mikkimous555@gmail.com
+2018-03-11 23:19:12 INFO  Page:20 - input subject
+2018-03-11 23:19:12 INFO  Page:28 - input Hello!
+2018-03-11 23:19:12 INFO  Page:16 - click on 
+2018-03-11 23:19:13 INFO  Page:16 - click on Сохранить и перейти
+2018-03-11 23:19:13 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:19:13 INFO  Page:16 - click on Черновики
+2018-03-11 23:19:14 INFO  Page:28 - Reading text mikkimous555
+2018-03-11 23:19:14 INFO  Page:16 - click on mikkimous555
+2018-03-11 23:19:14 INFO  Page:32 - read from this elementProxy element for: DefaultElementLocator 'By.xpath: //div[@class='mail-Compose-Field-Input']/input[@name='subj']'
+2018-03-11 23:19:15 INFO  Page:16 - click on janekasimova
+2018-03-11 23:19:15 INFO  Page:16 - click on Выход
+2018-03-11 23:19:17 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:19:48 INFO  Page:20 - input janekasimova
+2018-03-11 23:19:52 INFO  Page:20 - input Qwerty123456
+2018-03-11 23:19:52 INFO  Page:16 - click on Войти
+2018-03-11 23:19:55 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:19:57 INFO  Page:16 - click on Написать
+2018-03-11 23:19:59 INFO  Page:20 - input mikkimous555@gmail.com
+2018-03-11 23:19:59 INFO  Page:20 - input subject
+2018-03-11 23:20:00 INFO  Page:28 - input Hello!
+2018-03-11 23:20:00 INFO  Page:16 - click on 
+2018-03-11 23:20:00 INFO  Page:16 - click on Сохранить и перейти
+2018-03-11 23:20:01 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:20:01 INFO  Page:16 - click on Черновики
+2018-03-11 23:20:01 INFO  Page:28 - Reading text mikkimous555
+2018-03-11 23:20:02 INFO  Page:16 - click on mikkimous555
+2018-03-11 23:21:09 INFO  Page:20 - input janekasimova
+2018-03-11 23:21:10 INFO  Page:20 - input Qwerty123456
+2018-03-11 23:21:10 INFO  Page:16 - click on Войти
+2018-03-11 23:21:11 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:21:13 INFO  Page:16 - click on Написать
+2018-03-11 23:21:15 INFO  Page:20 - input mikkimous555@gmail.com
+2018-03-11 23:21:15 INFO  Page:20 - input subject
+2018-03-11 23:21:16 INFO  Page:28 - input Hello!
+2018-03-11 23:21:16 INFO  Page:16 - click on 
+2018-03-11 23:21:16 INFO  Page:16 - click on Сохранить и перейти
+2018-03-11 23:21:17 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:21:17 INFO  Page:16 - click on Черновики
+2018-03-11 23:21:18 INFO  Page:28 - Reading text mikkimous555
+2018-03-11 23:21:18 INFO  Page:16 - click on mikkimous555
+2018-03-11 23:21:20 INFO  Page:32 - read from this elementProxy element for: DefaultElementLocator 'By.xpath: //div[@class='mail-Compose-Field-Input']/input[@name='subj']'
+2018-03-11 23:21:21 INFO  Page:16 - click on janekasimova
+2018-03-11 23:21:22 INFO  Page:16 - click on Выход
+2018-03-11 23:21:23 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:22:00 INFO  Page:20 - input janekasimova
+2018-03-11 23:22:00 INFO  Page:20 - input Qwerty123456
+2018-03-11 23:22:00 INFO  Page:16 - click on Войти
+2018-03-11 23:22:01 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:22:03 INFO  Page:16 - click on Написать
+2018-03-11 23:22:04 INFO  Page:20 - input mikkimous555@gmail.com
+2018-03-11 23:22:05 INFO  Page:20 - input subject
+2018-03-11 23:22:05 INFO  Page:28 - input Hello!
+2018-03-11 23:22:05 INFO  Page:16 - click on 
+2018-03-11 23:22:06 INFO  Page:16 - click on Сохранить и перейти
+2018-03-11 23:22:06 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:22:06 INFO  Page:16 - click on Черновики
+2018-03-11 23:22:07 INFO  Page:28 - Reading text mikkimous555
+2018-03-11 23:22:07 INFO  Page:16 - click on mikkimous555
+2018-03-11 23:24:50 INFO  Page:20 - input janekasimova
+2018-03-11 23:24:55 INFO  Page:20 - input Qwerty123456
+2018-03-11 23:24:55 INFO  Page:16 - click on Войти
+2018-03-11 23:24:58 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:25:00 INFO  Page:16 - click on Написать
+2018-03-11 23:25:01 INFO  Page:20 - input mikkimous555@gmail.com
+2018-03-11 23:25:02 INFO  Page:20 - input subject
+2018-03-11 23:25:02 INFO  Page:28 - input Hello!
+2018-03-11 23:25:02 INFO  Page:16 - click on 
+2018-03-11 23:25:03 INFO  Page:16 - click on Сохранить и перейти
+2018-03-11 23:25:03 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:25:04 INFO  Page:16 - click on Черновики
+2018-03-11 23:25:05 INFO  Page:28 - Reading text mikkimous555
+2018-03-11 23:25:05 INFO  Page:16 - click on mikkimous555
+2018-03-11 23:25:05 INFO  Page:32 - read from this element[[ChromeDriver: chrome on MAC (43cef79319979525a33ed2ad8fca277c)] -> xpath: //div[@class='mail-Compose-Field-Input']/input[@name='subj']]
+2018-03-11 23:25:05 INFO  Page:28 - Reading text Hello!
+2018-03-11 23:25:06 INFO  Page:16 - click on 
+2018-03-11 23:25:06 INFO  Page:16 - click on janekasimova
+2018-03-11 23:25:06 INFO  Page:16 - click on Выход
+2018-03-11 23:25:08 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:28:36 INFO  Page:20 - input janekasimova
+2018-03-11 23:28:36 INFO  Page:20 - input Qwerty123456
+2018-03-11 23:28:36 INFO  Page:16 - click on Войти
+2018-03-11 23:28:38 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:28:40 INFO  Page:23 - Написать is displayed true
+2018-03-11 23:28:40 INFO  Page:16 - click on janekasimova
+2018-03-11 23:28:40 INFO  Page:16 - click on Выход
+2018-03-11 23:28:41 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:29:07 INFO  Page:20 - input janekasimova
+2018-03-11 23:29:07 INFO  Page:20 - input Qwerty123456
+2018-03-11 23:29:07 INFO  Page:16 - click on ?????
+2018-03-11 23:29:09 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:29:11 INFO  Page:16 - click on ????????
+2018-03-11 23:29:12 INFO  Page:20 - input mikkimous555@gmail.com
+2018-03-11 23:29:12 INFO  Page:20 - input subject
+2018-03-11 23:29:13 INFO  Page:28 - input Hello!
+2018-03-11 23:29:13 INFO  Page:16 - click on 
+2018-03-11 23:29:13 INFO  Page:16 - click on ????????? ? ???????
+2018-03-11 23:29:14 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:29:14 INFO  Page:16 - click on ?????????
+2018-03-11 23:29:55 INFO  Page:28 - Reading text mikkimous555
+2018-03-11 23:29:55 INFO  Page:16 - click on mikkimous555
+2018-03-11 23:29:56 INFO  Page:32 - read from this element[[ChromeDriver: chrome on MAC (b3ef763dd5e846264cd23b2238883e6a)] -> xpath: //div[@class='mail-Compose-Field-Input']/input[@name='subj']]
+2018-03-11 23:29:56 INFO  Page:28 - Reading text Hello!
+2018-03-11 23:29:56 INFO  Page:16 - click on 
+2018-03-11 23:29:56 INFO  Page:16 - click on janekasimova
+2018-03-11 23:29:56 INFO  Page:16 - click on ?????
+2018-03-11 23:29:58 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:29:59 INFO  Page:20 - input janekasimova
+2018-03-11 23:29:59 INFO  Page:20 - input Qwerty123456
+2018-03-11 23:29:59 INFO  Page:16 - click on ?????
+2018-03-11 23:30:00 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:30:02 INFO  Page:16 - click on ????????
+2018-03-11 23:30:03 INFO  Page:20 - input mikkimous555@gmail.com
+2018-03-11 23:30:03 INFO  Page:20 - input subject
+2018-03-11 23:30:04 INFO  Page:28 - input Hello!
+2018-03-11 23:30:04 INFO  Page:16 - click on 
+2018-03-11 23:30:04 INFO  Page:16 - click on ????????? ? ???????
+2018-03-11 23:30:05 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:30:05 INFO  Page:16 - click on ?????????
+2018-03-11 23:30:46 INFO  Page:16 - click on mikkimous555
+2018-03-11 23:30:46 INFO  Page:16 - click on ?????????
+2018-03-11 23:30:48 INFO  Page:16 - click on ?????????
+2018-03-11 23:30:50 INFO  Page:28 - Reading text ? ????? ??????????? ??? ?????.
+2018-03-11 23:30:50 INFO  Page:16 - click on ????????????
+2018-03-11 23:30:51 INFO  Page:28 - Reading text mikkimous555
+2018-03-11 23:30:51 INFO  Page:16 - click on ???????
+2018-03-11 23:30:51 INFO  Page:16 - click on janekasimova
+2018-03-11 23:30:52 INFO  Page:16 - click on ?????
+2018-03-11 23:31:13 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:31:14 INFO  Page:20 - input janekasimova
+2018-03-11 23:31:14 INFO  Page:20 - input Qwerty123456
+2018-03-11 23:31:14 INFO  Page:16 - click on ?????
+2018-03-11 23:31:35 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:31:35 INFO  Page:23 - ???????? is displayed true
+2018-03-11 23:31:35 INFO  Page:16 - click on janekasimova
+2018-03-11 23:31:36 INFO  Page:16 - click on ?????
+2018-03-11 23:31:57 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:37:56 INFO  Page:20 - input janekasimova
+2018-03-11 23:37:56 INFO  Page:20 - input Qwerty123456
+2018-03-11 23:37:56 INFO  Page:16 - click on Войти
+2018-03-11 23:37:58 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:38:00 INFO  Page:23 - Написать is displayed true
+2018-03-11 23:38:00 INFO  Page:16 - click on janekasimova
+2018-03-11 23:38:01 INFO  Page:16 - click on Выход
+2018-03-11 23:38:02 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:38:17 INFO  Page:20 - input janekasimova
+2018-03-11 23:38:18 INFO  Page:20 - input Qwerty123456
+2018-03-11 23:38:19 INFO  Page:16 - click on Войти
+2018-03-11 23:38:20 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:38:22 INFO  Page:23 - Написать is displayed true
+2018-03-11 23:38:23 INFO  Page:16 - click on janekasimova
+2018-03-11 23:38:23 INFO  Page:16 - click on Выход
+2018-03-11 23:38:25 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:39:23 INFO  Page:20 - input janekasimova
+2018-03-11 23:39:27 INFO  Page:20 - input Qwerty123456
+2018-03-11 23:39:28 INFO  Page:16 - click on ?????
+2018-03-11 23:39:30 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:39:32 INFO  Page:16 - click on ????????
+2018-03-11 23:39:33 INFO  Page:20 - input mikkimous555@gmail.com
+2018-03-11 23:39:34 INFO  Page:20 - input subject
+2018-03-11 23:39:34 INFO  Page:28 - input Hello!
+2018-03-11 23:39:34 INFO  Page:16 - click on 
+2018-03-11 23:39:35 INFO  Page:16 - click on ????????? ? ???????
+2018-03-11 23:39:35 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:39:35 INFO  Page:16 - click on ?????????
+2018-03-11 23:40:04 INFO  Page:28 - Reading text mikkimous555
+2018-03-11 23:40:04 INFO  Page:16 - click on mikkimous555
+2018-03-11 23:40:04 INFO  Page:32 - read from this element[[ChromeDriver: chrome on MAC (25c6c218e15e17178d6ccdc9834874bc)] -> xpath: //div[@class='mail-Compose-Field-Input']/input[@name='subj']]
+2018-03-11 23:40:05 INFO  Page:28 - Reading text Hello!
+2018-03-11 23:40:05 INFO  Page:16 - click on 
+2018-03-11 23:40:05 INFO  Page:16 - click on janekasimova
+2018-03-11 23:40:05 INFO  Page:16 - click on ?????
+2018-03-11 23:40:06 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:40:07 INFO  Page:20 - input janekasimova
+2018-03-11 23:40:08 INFO  Page:20 - input Qwerty123456
+2018-03-11 23:40:08 INFO  Page:16 - click on ?????
+2018-03-11 23:40:09 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:40:10 INFO  Page:16 - click on ????????
+2018-03-11 23:40:11 INFO  Page:20 - input mikkimous555@gmail.com
+2018-03-11 23:40:12 INFO  Page:20 - input subject
+2018-03-11 23:40:12 INFO  Page:28 - input Hello!
+2018-03-11 23:40:12 INFO  Page:16 - click on 
+2018-03-11 23:40:13 INFO  Page:16 - click on ????????? ? ???????
+2018-03-11 23:40:13 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:40:13 INFO  Page:16 - click on ?????????
+2018-03-11 23:40:54 INFO  Page:16 - click on mikkimous555
+2018-03-11 23:40:55 INFO  Page:16 - click on ?????????
+2018-03-11 23:40:57 INFO  Page:16 - click on ?????????
+2018-03-11 23:40:59 INFO  Page:28 - Reading text ? ????? ??????????? ??? ?????.
+2018-03-11 23:40:59 INFO  Page:16 - click on ????????????
+2018-03-11 23:40:59 INFO  Page:28 - Reading text mikkimous555
+2018-03-11 23:41:00 INFO  Page:16 - click on ???????
+2018-03-11 23:41:00 INFO  Page:16 - click on janekasimova
+2018-03-11 23:41:00 INFO  Page:16 - click on ?????
+2018-03-11 23:41:22 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:41:23 INFO  Page:20 - input janekasimova
+2018-03-11 23:41:23 INFO  Page:20 - input Qwerty123456
+2018-03-11 23:41:23 INFO  Page:16 - click on ?????
+2018-03-11 23:41:44 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:41:44 INFO  Page:23 - ???????? is displayed true
+2018-03-11 23:41:44 INFO  Page:16 - click on janekasimova
+2018-03-11 23:41:45 INFO  Page:16 - click on ?????
+2018-03-11 23:42:06 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:52:23 INFO  Page:20 - input janekasimova
+2018-03-11 23:52:23 INFO  Page:20 - input Qwerty123456
+2018-03-11 23:52:24 INFO  Page:16 - click on ?????
+2018-03-11 23:52:25 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:52:27 INFO  Page:23 - ???????? is displayed true
+2018-03-11 23:52:27 INFO  Page:16 - click on janekasimova
+2018-03-11 23:52:28 INFO  Page:16 - click on ?????
+2018-03-11 23:52:29 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:52:30 INFO  Page:70 - screenshot have being taken
+2018-03-11 23:54:12 INFO  Page:20 - input janekasimova
+2018-03-11 23:54:12 INFO  Page:20 - input Qwerty123456
+2018-03-11 23:54:12 INFO  Page:16 - click on ?????
+2018-03-11 23:54:14 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:54:16 INFO  Page:23 - ???????? is displayed true
+2018-03-11 23:54:16 INFO  Page:16 - click on janekasimova
+2018-03-11 23:54:17 INFO  Page:16 - click on ?????
+2018-03-11 23:54:19 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:54:20 INFO  Page:70 - screenshot have being takentestLogIn
+2018-03-11 23:59:24 INFO  Page:49 - start test 
+2018-03-11 23:59:26 INFO  Page:51 - navigate to https://yandex.ru/
+2018-03-11 23:59:27 INFO  Page:20 - input janekasimova
+2018-03-11 23:59:27 INFO  Page:20 - input Qwerty123456
+2018-03-11 23:59:27 INFO  Page:16 - click on ?????
+2018-03-11 23:59:28 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:59:30 INFO  Page:16 - click on ????????
+2018-03-11 23:59:32 INFO  Page:20 - input mikkimous555@gmail.com
+2018-03-11 23:59:32 INFO  Page:20 - input subject
+2018-03-11 23:59:33 INFO  Page:28 - input Hello!
+2018-03-11 23:59:33 INFO  Page:16 - click on 
+2018-03-11 23:59:33 INFO  Page:16 - click on ????????? ? ???????
+2018-03-11 23:59:34 WARN  Page:41 - cannot unhighlight element
+2018-03-11 23:59:34 INFO  Page:16 - click on ?????????

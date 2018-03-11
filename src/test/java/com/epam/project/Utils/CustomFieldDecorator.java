@@ -1,6 +1,7 @@
 package com.epam.project.Utils;
 
 import com.epam.project.Elements.*;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.internal.Locatable;
 import org.openqa.selenium.internal.WrapsElement;
@@ -19,9 +20,11 @@ import java.lang.reflect.Proxy;
 public class CustomFieldDecorator implements FieldDecorator {
 
     protected ElementLocatorFactory factory;
+    protected JavascriptExecutor js;
 
-    public CustomFieldDecorator(ElementLocatorFactory factory) {
+    public CustomFieldDecorator(ElementLocatorFactory factory, JavascriptExecutor js) {
         this.factory = factory;
+        this.js = js;
     }
 
     public Object decorate(ClassLoader loader, Field field) {
@@ -30,31 +33,32 @@ public class CustomFieldDecorator implements FieldDecorator {
         }
 
         ElementLocator locator = factory.createLocator(field);
-        if (locator == null){
+        if (locator == null) {
             return null;
         }
 
-        return proxyForLocator(loader, locator, field);
+
+        return proxyForLocator(loader, locator, field, js);
     }
 
     protected Object proxyForLocator(ClassLoader loader,
-                                     ElementLocator locator, Field field) {
+                                     ElementLocator locator, Field field, JavascriptExecutor js) {
         InvocationHandler handler = new LocatingElementHandler(locator);
 
         WebElement proxy;
         proxy = (WebElement) Proxy.newProxyInstance(
-                loader, new Class[] {WebElement.class, WrapsElement.class, Locatable.class}, handler);
-        if(field.getType() == Button.class){
-            return new Button(proxy);
+                loader, new Class[]{WebElement.class, WrapsElement.class, Locatable.class}, handler);
+        if (field.getType() == Button.class) {
+            return new Button(proxy, js);
         }
-        if(field.getType() == TextBox.class){
-            return new TextBox(proxy);
+        if (field.getType() == TextBox.class) {
+            return new TextBox(proxy, js);
         }
-        if(field.getType() == Image.class){
-            return new Image(proxy);
+        if (field.getType() == Image.class) {
+            return new Image(proxy, js);
         }
-        if(field.getType() == CheckBox.class){
-            return new CheckBox(proxy);
+        if (field.getType() == CheckBox.class) {
+            return new CheckBox(proxy, js);
         }
         return proxy;
     }

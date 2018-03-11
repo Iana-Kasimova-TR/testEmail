@@ -1,0 +1,46 @@
+2018-03-12 00:00:20 INFO  Page:28 - Reading text mikkimous555
+2018-03-12 00:00:20 INFO  Page:16 - click on mikkimous555
+2018-03-12 00:00:21 INFO  Page:32 - read from this element[[ChromeDriver: chrome on MAC (fe5961451a369de9992f2c4a8aef29c2)] -> xpath: //div[@class='mail-Compose-Field-Input']/input[@name='subj']]
+2018-03-12 00:00:21 INFO  Page:28 - Reading text Hello!
+2018-03-12 00:00:21 INFO  Page:16 - click on 
+2018-03-12 00:00:21 INFO  Page:16 - click on janekasimova
+2018-03-12 00:00:22 INFO  Page:16 - click on ?????
+2018-03-12 00:00:23 WARN  Page:41 - cannot unhighlight element
+2018-03-12 00:00:23 INFO  Page:61 - finish test
+2018-03-12 00:00:23 INFO  Page:49 - start test 
+2018-03-12 00:00:23 INFO  Page:51 - navigate to https://yandex.ru/
+2018-03-12 00:00:24 INFO  Page:20 - input janekasimova
+2018-03-12 00:00:24 INFO  Page:20 - input Qwerty123456
+2018-03-12 00:00:24 INFO  Page:16 - click on ?????
+2018-03-12 00:00:25 WARN  Page:41 - cannot unhighlight element
+2018-03-12 00:00:27 INFO  Page:16 - click on ????????
+2018-03-12 00:00:28 INFO  Page:20 - input mikkimous555@gmail.com
+2018-03-12 00:00:28 INFO  Page:20 - input subject
+2018-03-12 00:00:29 INFO  Page:28 - input Hello!
+2018-03-12 00:00:29 INFO  Page:16 - click on 
+2018-03-12 00:00:29 INFO  Page:16 - click on ????????? ? ???????
+2018-03-12 00:00:30 WARN  Page:41 - cannot unhighlight element
+2018-03-12 00:00:30 INFO  Page:16 - click on ?????????
+2018-03-12 00:00:31 INFO  Page:16 - click on mikkimous555
+2018-03-12 00:00:32 INFO  Page:16 - click on ?????????
+2018-03-12 00:00:33 INFO  Page:16 - click on ?????????
+2018-03-12 00:00:35 INFO  Page:28 - Reading text ? ????? ??????????? ??? ?????.
+2018-03-12 00:00:35 INFO  Page:16 - click on ????????????
+2018-03-12 00:00:36 INFO  Page:28 - Reading text mikkimous555
+2018-03-12 00:00:36 INFO  Page:16 - click on ???????
+2018-03-12 00:00:36 INFO  Page:16 - click on janekasimova
+2018-03-12 00:00:37 INFO  Page:16 - click on ?????
+2018-03-12 00:00:59 WARN  Page:41 - cannot unhighlight element
+2018-03-12 00:00:59 INFO  Page:61 - finish test
+2018-03-12 00:00:59 INFO  Page:49 - start test 
+2018-03-12 00:00:59 INFO  Page:51 - navigate to https://yandex.ru/
+2018-03-12 00:01:00 INFO  Page:20 - input janekasimova
+2018-03-12 00:01:00 INFO  Page:20 - input Qwerty123456
+2018-03-12 00:01:00 INFO  Page:16 - click on ?????
+2018-03-12 00:01:22 WARN  Page:41 - cannot unhighlight element
+2018-03-12 00:01:22 INFO  Page:23 - ???????? is displayed true
+2018-03-12 00:01:22 INFO  Page:16 - click on janekasimova
+2018-03-12 00:01:23 INFO  Page:16 - click on ?????
+2018-03-12 00:01:44 WARN  Page:41 - cannot unhighlight element
+2018-03-12 00:01:44 INFO  Page:61 - finish test
+2018-03-12 00:01:44 INFO  Page:73 - screenshot have being takentestLogIn

@@ -48,7 +48,7 @@ public class MainEmailPage extends Page{
     @FindBy(xpath = "//div[text()='Письмо отправлено']")
     private Image successfullMsg;
 
-    @FindBy(xpath = "//div[@title='janekasimova@yandex.ru']")
+    @FindBy(xpath = "//div[text()='janekasimova']")
     private Button profile;
 
     @FindBy(xpath = "//a[text()='Выход']")

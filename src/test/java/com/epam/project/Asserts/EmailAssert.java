@@ -18,13 +18,17 @@ public class EmailAssert {
         MainEmailPage mainEmailPage = new MainEmailPage();
         mainEmailPage.init(email.driver);
         email.wait.until(ExpectedConditions.visibilityOf(mainEmailPage.getLogoYandex().element));
-        Assert.assertTrue(mainEmailPage.getWrite().isDisplayed(), "log in wasn't successfull");
+        Assert.assertFalse(mainEmailPage.getWrite().isDisplayed(), "log in wasn't successfull");
     }
 
     public void checkExistanceDraft(Email email) {
         DraftEmailPage draftPage = new DraftEmailPage();
         draftPage.init(email.driver);
-        email.wait.until(ExpectedConditions.visibilityOf(draftPage.getRecipient().element));
+        try {
+            email.wait.until(ExpectedConditions.visibilityOf(draftPage.getRecipient().element));
+        }catch (Exception e){
+            email.driver.navigate().refresh();
+        }
         Assert.assertTrue(draftPage.getRecipient().getText().contains(email.recepient.substring(0, 11)), "recipient of draft isn't correct");
         draftPage.getRecipient().click();
         CreateEmailForm createForm = new CreateEmailForm();

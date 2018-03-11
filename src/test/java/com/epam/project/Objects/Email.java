@@ -62,7 +62,11 @@ public class Email {
     public void sentDraft(){
         DraftEmailPage draftPage = new DraftEmailPage();
         draftPage.init(this.driver);
-        wait.until(ExpectedConditions.visibilityOf(draftPage.getRecipient().element));
+        try {
+            wait.until(ExpectedConditions.visibilityOf(draftPage.getRecipient().element));
+        }catch (Exception e){
+            driver.navigate().refresh();
+        }
         draftPage.getRecipient().click();
         sentEmail();
     }

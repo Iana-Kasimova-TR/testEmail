@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 144.426 sec <<< FAILURE!
+testLogIn(com.epam.project.EmailTest)  Time elapsed: 0.121 sec  <<< FAILURE!
+java.lang.AssertionError: log in wasn't successfull expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertFalse(Assert.java:65)
+	at com.epam.project.Asserts.EmailAssert.checkSuccessfullLogIn(EmailAssert.java:21)
+	at com.epam.project.EmailTest.testLogIn(EmailTest.java:15)

@@ -1,40 +1,39 @@
 package com.epam.project.Elements;
 
-import com.epam.project.Pages.Page;
-import org.apache.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 /**
  * Created by Iana_Kasimova on 1/22/2018.
  */
-public class TextBox extends BaseElement{
+public class TextBox extends BaseElement {
 
-    public TextBox(WebElement element){
-       super(element);
+    public TextBox(WebElement element, JavascriptExecutor js) {
+        super(element, js);
     }
 
-    public void sendKeys(String text){
+    public void sendKeys(String text) {
+        highlightElement();
         this.element.sendKeys(text);
-        logger.debug("send " + text);
+        unHighlightElement();
+        logger.info("input " + text);
     }
 
-    public void sendKeysUsingAction(Actions actions, String text){
+    public void sendKeysUsingAction(Actions actions, String text) {
+        highlightElement();
         actions.sendKeys(text);
         actions.build().perform();
+        unHighlightElement();
+        logger.info("input " + text);
     }
 
-    public String getValue(){
+    public String getValue() {
+        logger.info("read from this element" + element.toString());
         return this.element.getAttribute("value");
     }
 
-    public void sendKeysByUsingJavascript(JavascriptExecutor executor){
-        executor.executeScript("arguments[0].value='Kirtesh';", element);
-    }
-
-    public void clear(){
+    public void clear() {
         this.element.clear();
     }
 
